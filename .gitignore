@@ -1,0 +1,23 @@
+# Ignore large data files
+*.csv
+*.bin
+*.idx
+*.pt
+*.npy
+
+# Ignore checkpoints and model files
+covid_evo2_model/*/checkpoints/
+fixed_checkpoint/
+evo2_checkpoint
+
+# Ignore preprocessed data
+preprocessed_data/
+
+# Ignore results
+results/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+

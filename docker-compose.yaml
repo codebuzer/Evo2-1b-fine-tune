@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  evo2-finetune:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./scripts:/app/scripts
+      - ./preprocessed_data:/app/preprocessed_data
+      - ./covid_evo2_model:/app/covid_evo2_model
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: bash /app/run.sh
+    shm_size: '16gb'
+    ulimits:
+      memlock: -1
+      stack: 67108864
