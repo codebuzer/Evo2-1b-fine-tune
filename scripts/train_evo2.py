@@ -9,7 +9,7 @@ from bionemo.evo2.model import Evo2Model
 from bionemo.evo2.tokenizer import Evo2Tokenizer
 
 class SpikeDataset(Dataset):
-    def __init__(self, csv_file, tokenizer, max_length=1024):
+    def __init__(self, csv_file, tokenizer, max_length=4000):
         self.df = pd.read_csv(csv_file)
         self.sequences = self.df['sequence'].values
         self.country_cols = [col for col in self.df.columns if col != 'sequence']
