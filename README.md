@@ -1,10 +1,10 @@
-# Evo2-1b Fine-tuning for COVID-19 Variant Analysis
+# Evo2-1b Fine-tuning for SARS-Cov-2 Variant Classification
 
 This repository contains code for fine-tuning the Evo2-1b model on COVID-19 spike protein sequences to analyze and classify variants.
 
 ## Overview
 
-The project uses NVIDIA's BioNeMo framework to fine-tune the Evo2-1b model on COVID-19 spike protein sequence data. The model is trained to recognize patterns in spike protein sequences that correlate with different COVID-19 variants.
+The project uses NVIDIA's BioNeMo framework to fine-tune the Evo2-1b model on COVID-19 spike protein sequence data. The model is trained to recognize patterns in spike protein sequences that correlate with different SARS-Cov-2 variants.
 
 ## Features
 
